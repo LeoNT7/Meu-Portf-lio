@@ -1,0 +1,258 @@
+/* ====== Importação de Fontes ====== */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* ====== Variáveis de Cores e Fontes ====== */
+:root {
+    --cor-primaria: #06080D;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #00B6FF;
+    --cor-hover: #16187C;
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+/* ====== Estilos Globais ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    background-image: url('/assets/background.png');
+}
+
+/* ====== Cabeçalho ====== */
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 40px;
+}
+
+.icone__cabecalho {
+    margin-right: 1em;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.cabecalho__menu__link:hover {
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: gradient 2s ease infinite;
+    border-radius: 80px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} 
+
+/* ====== Apresentação ====== */
+.apresentacao {
+    padding: 4% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__curriculo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4% 15%;
+    gap: 10em;
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    gap: 5px;
+}
+
+.apresentacao__conteudo__curriculo {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-principal);
+    color: var(--cor-terciaria);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.apresentacao__links__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria); 
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.apresentacao__links__link:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: gradient 1.5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ====== Conteúdo ====== */
+.conteudo__curriculo {
+    padding: 3%;
+    border: 8px solid var(--cor-hover);
+    border-radius: 8px;
+}
+
+.conteudo__experiencia {
+    padding: 3%;
+    border: 8px solid var(--cor-hover);
+    border-radius: 8px;
+}
+
+/* ====== Destaques ====== */
+.destaque__texto {
+    color: var(--cor-terciaria);
+    font-weight: 600;
+}
+
+.destaque__texto__links {
+    font-weight: 600;
+    margin: 1em;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/* ====== Lista de Habilidades ====== */
+.lista__habilidades {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 2em;
+    align-items: center;
+    gap: 15px;
+    border: 10px solid var(--cor-secundaria);
+    border-radius: 80px;
+    border-style: double;
+}
+
+/* ====== Rodapé ====== */
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* ====== Media Queries ====== */
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        padding: 1%;
+        display: block;
+        text-align: center;
+    }
+    .cabecalho__menu__link {
+        font-size: 20px;
+        background: linear-gradient(-45deg, #1b0676, #3480cc, #096f94, #417166);
+        background-size: 200% 100%;
+        animation: gradient 4s ease infinite;
+        border-radius: 20px;
+        padding: 10px;
+        
+    }
+    .icone__cabecalho {
+        display: none;
+    }
+    .apresentacao {
+        flex-direction: column;
+        padding: 4% 5%;
+    }
+    .apresentacao__curriculo {
+        display: flex;
+        flex-direction: column;
+        padding: 4% 5%;
+    }
+    .apresentacao__conteudo {
+        width: 100%;
+    }
+    .apresentacao__links__link {
+        width: 100%;
+        background: linear-gradient(-45deg, #0d20b5, #1f0571, #23a6d5, #23d5ab);
+        background-size: 200% 200%;
+        animation: gradient 4s ease infinite;
+    }
+    .foto__about {
+        width: 100%;
+    }
+    .apresentacao__conteudo__curriculo {
+        margin-bottom: 2em;
+    }
+    .lista__habilidades {
+        width: 100%;
+    }
+}
