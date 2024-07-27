@@ -210,7 +210,7 @@ body {
 }
 
 /* ====== Media Queries ====== */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 728px) {
     .cabecalho {
         padding: 1%;
         display: block;
