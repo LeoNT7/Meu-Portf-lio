@@ -210,7 +210,7 @@ body {
 }
 
 /* ====== Media Queries ====== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 420px) {
     .cabecalho {
         padding: 1%;
         display: block;
@@ -229,7 +229,7 @@ body {
         display: none;
     }
     .apresentacao {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 4% 5%;
     }
     .apresentacao__curriculo {
